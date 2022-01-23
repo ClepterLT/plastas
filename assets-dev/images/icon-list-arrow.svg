@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>icon12/linkGreen</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon12/linkGreen" fill="#0DD26A" fill-rule="nonzero">
+            <path d="M6,6.76894343 L3.86476976,4.158031 C3.67590473,3.95657494 3.359487,3.94636792 3.15803098,4.13523297 C2.95657495,4.32409802 2.94636793,4.64051579 3.13523295,4.84197185 L5.6352316,7.84197063 C5.83276828,8.05267646 6.16723172,8.05267646 6.3647684,7.84197063 L8.86476705,4.84197185 C9.05363207,4.64051579 9.04342505,4.32409802 8.84196902,4.13523297 C8.640513,3.94636792 8.32409527,3.95657494 8.13523024,4.158031 L6,6.76894343 Z" id="Path-5" transform="translate(6.000000, 6.000000) rotate(-90.000000) translate(-6.000000, -6.000000) "></path>
+        </g>
+    </g>
+</svg>

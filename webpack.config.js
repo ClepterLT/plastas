@@ -13,37 +13,46 @@ module.exports = {
     filename: 'js/app.js',
     path: path.resolve(__dirname, './assets'),
   },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "./assets-dev/images", to: "./images" },
+        // { from: "./assets-dev/fonts", to: "./fonts" },
+      ],
+    })
+  ],
   module: {
     rules: [{
       test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'
     }, {
-      test: /\.scss$/,
-      use: [{
+    test: /\.scss$/,
+    use: [
+      {
         loader: 'file-loader',
         options: {
           name: 'css/app.css',
         }
       },
-        {
-          loader: 'extract-loader'
-        },
-        {
-          loader: 'css-loader'
-        },
-        {
-          loader: 'postcss-loader'
-        },
-        {
-          loader: 'sass-loader'
-        }]
-    }]
+      {
+        loader: 'extract-loader'
+      },
+      {
+        loader: 'css-loader',
+        options: {
+          url: false
+        }
+      },
+      {
+        loader: 'postcss-loader'
+      },
+      {
+        loader: 'resolve-url-loader',
+        options: { sourceMap: true }
+      },
+      {
+        loader: 'sass-loader',
+        options: { sourceMap: true }
+      }]
+    },]
   },
-  // plugins: [
-  //   new CopyWebpackPlugin({
-  //     patterns: [
-  //       { from: "./assets-dev/images", to: "./images" },
-  //       { from: "./assets-dev/fonts", to: "./fonts" },
-  //     ],
-  //   }),
-  // ],
 };

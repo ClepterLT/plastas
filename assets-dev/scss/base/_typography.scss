@@ -1,6 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+@mixin txt-small {
+  font-family: $font-open-sans;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.56rem;
+}
+.txt-small { @include txt-small; }
+
+@mixin txt-regular {
+  font-family: $font-open-sans;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.56rem;
+}
+.txt-regular { @include txt-regular; }
+
+@mixin txt-h5 {
+  font-family: $font-open-sans;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.56rem;
+}
+.txt-h5 { @include txt-h5; }
+
+@mixin txt-c-green {
+  color: $c-primary;
+}
+@mixin txt-c-white {
+  color: $c-white;
+}
+
 body {
-  // font-family: "Lato", serif;
-  // font-weight: 400;
-  // line-height: 1.7;
-  // color: #000;
+  font-family: $font-open-sans;
+  color: $c-text;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.56rem;
+}
+
+.plastas-link {
+  color: $c-link;
+  transition: color .3s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $c-hover;
+  }
 }
