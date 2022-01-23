@@ -1,0 +1,35 @@
+{
+  "name": "horion-digital-wordpress-framework",
+  "version": "2.0.1",
+  "description": "horion-description",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": "webpack --watch"
+  },
+  "author": "Horion Digital",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.16.7",
+    "@babel/preset-env": "7.16.7",
+    "autoprefixer": "10.4.2",
+    "babel-loader": "8.2.3",
+    "babel-polyfill": "",
+    "copy-webpack-plugin": "10.2.0",
+    "cross-conf-env": "1.2.1",
+    "css-loader": "6.5.1",
+    "extract-loader": "5.1.0",
+    "file-loader": "6.2.0",
+    "sass": "1.47.0",
+    "node-sass": "7.0.1",
+    "postcss-cli": "9.1.0",
+    "postcss-loader": "6.2.1",
+    "sass-loader": "12.4.0",
+    "style-loader": "3.3.1",
+    "webpack": "5.65.0",
+    "webpack-cli": "4.9.1"
+  },
+  "dependencies": {
+    "jquery": "3.6.0",
+    "normalize.css": "8.0.1"
+  }
+}
