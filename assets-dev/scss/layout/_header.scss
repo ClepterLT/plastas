@@ -1,114 +1,114 @@
 .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    transition: transform 0.3s, opacity 0.3s;
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition: transform 0.3s, opacity 0.3s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 
-    &:hover {
-        transform: scale(0.9);
-        opacity: 0.9;
-    }
+  &:hover {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
 
-    &__img {
-        height: 10.5rem;
-        width: 17.4rem;
-    }
+  &__img {
+    height: 5.5rem;
+    width: auto;
+  }
 }
 
 .nav-header {
-    flex: 1 1 0%;
+  flex: 1 1 0%;
+
+  display: flex;
+  justify-content: flex-end;
+
+  @include respond(base) {
+    display: none;
+  }
+
+  &__list {
+    margin-right: 3rem;
 
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+  }
 
-    @include respond(base) {
-        display: none;
+  &__item {
+    font-weight: $f-bold;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-right: 3.5rem;
+    }
+  }
+
+  &__link {
+    transition: color 0.3s;
+    color: $c-black;
+
+    &:active,
+    &:visited,
+    &:hover {
+      color: $c-primary;
     }
 
-    &__list {
-        margin-right: 3rem;
+    &::after {
+      display: block;
+      content: "";
+      width: 0;
+      visibility: hidden;
+      opacity: 0;
+      height: 1px;
+      background-color: $c-primary;
+      transition: width 0.3s;
+    }
 
-        display: flex;
-        align-items: center;
+    &:hover::after,
+    &:active::after {
+      width: 100%;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include respond(base) {
+      display: block;
+    }
+  }
+
+  &__icon {
+    height: 3.2rem;
+    width: 3.2rem;
+    fill: $c-text;
+  }
+
+  &--mobile {
+    position: absolute;
+    top: 9rem;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 3rem;
+    background-color: $c-white;
+    transform: translateY(-4rem);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+
+    &__list {
+      margin-bottom: 3rem;
     }
 
     &__item {
-        font-weight: $f-bold;
-        text-transform: uppercase;
-
-        &:not(:last-child) {
-            margin-right: 3.5rem;
-        }
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
     }
-
-    &__link {
-        transition: color .3s;
-        color: $c-black;
-
-        &:active,
-        &:visited,
-        &:hover {
-            color: $c-primary;
-        }
-
-        &::after {
-            display: block;
-            content: "";
-            width: 0;
-            visibility: hidden;
-            opacity: 0;
-            height: 1px;
-            background-color: $c-primary;
-            transition: width 0.3s;
-        }
-
-        &:hover::after,
-        &:active::after {
-            width: 100%;
-            visibility: visible;
-            opacity: 1;
-        }
-    }
-
-    &__button {
-        display: none;
-
-        @include respond(base) {
-            display: block;
-        }
-    }
-
-    &__icon {
-        height: 3.2rem;
-        width: 3.2rem;
-        fill: $c-text;
-    }
-
-    &--mobile {
-        position: absolute;
-        top: 9rem;
-        right: 0;
-        opacity: 0;
-        visibility: hidden;
-        padding: 3rem;
-        background-color: $c-white ;
-        transform: translateY(-4rem);
-        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-
-        &__list {
-            margin-bottom: 3rem;
-        }
-
-        &__item {
-            &:not(:last-child) {
-                margin-bottom: 1rem;
-            }
-        }
-    }
+  }
 }
 
 .js-icon-hidden {
-    display: none;
+  display: none;
 }

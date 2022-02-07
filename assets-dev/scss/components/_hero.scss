@@ -1,0 +1,33 @@
+.hero {
+  &__row {
+    column-gap: 2.4rem;
+
+    @include respond(br820) {
+      flex-direction: column-reverse;
+      row-gap: 3.2rem;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex: 0 0 40%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 1.6rem;
+  }
+
+  &__right {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__img {
+    height: 65vh;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}

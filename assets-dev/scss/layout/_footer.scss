@@ -1,82 +1,82 @@
 .footer {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    border-top: $b-small;
-    @include txt-small;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-top: $b-small;
+  @include txt-small;
 
-    &__row {
-        display: grid;
-        grid-template-columns: 1.2fr repeat(3, 1fr);
-        column-gap: 5rem;
-        padding-bottom: 2.5rem;
+  &__row {
+    display: grid;
+    grid-template-columns: 1.2fr repeat(3, 1fr);
+    column-gap: 5rem;
+    padding-bottom: 2.5rem;
 
-        @include respond(br930) {
-            grid-template-columns: repeat(3, 1fr); 
-        }
-
-        @include respond(br680) {
-            grid-template-columns: repeat(1, 1fr); 
-            row-gap: 2.5rem;
-        }
+    @include respond(br930) {
+      grid-template-columns: repeat(3, 1fr);
     }
 
-    &__subrow {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 2.5rem;
-        border-top: $b-small-light;
+    @include respond(br680) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 2.5rem;
+    }
+  }
 
-        @include respond(br680) {
-            flex-direction: column-reverse;
-            justify-content: center;
-            row-gap: 5rem;
-        }
+  &__subrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    border-top: $b-small-light;
+
+    @include respond(br680) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      row-gap: 5rem;
+    }
+  }
+
+  &__logo-link {
+    place-self: start start;
+
+    @include respond(br930) {
+      grid-column: 1 / 4;
     }
 
-    &__logo-link {
-        place-self: start start;
-
-        @include respond(br930) {
-            grid-column: 1 / 4;
-        }
-
-        @include respond(br680) {
-            grid-column: 1 / 2;
-        }
+    @include respond(br680) {
+      grid-column: 1 / 2;
     }
+  }
 
-    &__logo-img {
-        height: 8.5rem;
-        width: auto;
-        object-fit: cover;
-        object-position: center;
+  &__logo-img {
+    height: 5.5rem;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__item {
+    margin-top: 6px;
+  }
+
+  &__arrow {
+    margin-right: 1rem;
+  }
+
+  &__socials {
+    margin-top: 1.5rem;
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 5rem;
+
+      @include respond(br680) {
+        column-gap: 2.5rem;
+      }
     }
-
-    &__item {
-        margin-top: 6px;
+    &-link {
+      font-weight: 700;
     }
-
-    &__arrow {
-        margin-right: 1rem;
-    }
-
-    &__socials {
-        margin-top: 1.5rem;
-    }
-
-    &__nav {
-        &-list {
-            display: flex;
-            align-items: center;
-            column-gap: 5rem;
-
-            @include respond(br680) {
-                column-gap: 2.5rem;
-            }
-        }
-        &-link {
-            font-weight: 700;
-        }
-    }
+  }
 }
