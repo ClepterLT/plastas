@@ -12,7 +12,8 @@
   "base/utilities";
 
 // 4. Components
-@import "components/buttons", "components/hero", "components/feature";
+@import "components/buttons", "components/hero", "components/feature",
+  "components/cta";
 
 // 5. Layout-related sections
 @import "layout/header", "layout/footer";

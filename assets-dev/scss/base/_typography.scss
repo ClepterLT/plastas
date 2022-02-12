@@ -31,6 +31,18 @@
   @include txt-h1;
 }
 
+@mixin txt-h2 {
+  font-family: $font-open-sans;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 3.84rem;
+  text-transform: uppercase;
+  color: $c-black;
+}
+.txt-h2 {
+  @include txt-h2;
+}
+
 @mixin txt-h3 {
   font-family: $font-open-sans;
   font-weight: 700;

@@ -25,16 +25,25 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
-$features = get_field( 'features' ) ?: 'Features';
+$title = get_field( 'cta_title' ) ?: 'Susisiekite su mumis';
+$text = get_field ( 'cta_text' ) ?: 'Sudomino? Susisiekite su mumis darbo metu dėl detalesnės informacijos.';
+$img = get_field ( 'ctaImage' );
+$phone = get_field( 'cta_phone' ) ?: '+370 674 578 38';
+$email = get_field ( 'cta_email' ) ?: 'info@plastas.lt'
 
 ?>
 <section class="cta">
 		<div class="row cta__row">
 			<div class="cta__left">
-
+				<h2 class="txt-h2"><?= $title ?></h2>
+				<p class="txt-regular"><?= $text ?></p>
+				<ul class="cta__list">
+					<li class="cta__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-list-arrow.svg" class="footer__arrow" alt="List arrow" /><strong>Telefonas:</strong> <a href="tel: <?= $phone ?>" class="plastas-link"><?= $phone ?></a></li>
+					<li class="cta__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-list-arrow.svg" class="footer__arrow" alt="List arrow" /><strong>El. paštas:</strong> <a href="mailto: <?= $email ?>" class="plastas-link"><?= $email ?></a></li>
+				</ul>
 			</div>
 			<div class="cta__right">
-				<img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>" class="hero__img" />
+				<img src="<?= $img['url'] ?>" alt="<?= $img['alt'] ?>" class="cta__img" />
 			</div>
 		</div>
 </section>
