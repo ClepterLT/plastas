@@ -25,8 +25,8 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
-$title = get_field( 'cta_title' ) ?: 'Susisiekite su mumis';
-$text = get_field ( 'cta_text' ) ?: 'Sudomino? Susisiekite su mumis darbo metu dėl detalesnės informacijos.';
+$title = get_field( 'ctaTitle' ) ?: 'Susisiekite su mumis';
+$text = get_field ( 'ctaText' ) ?: 'Sudomino? Susisiekite su mumis darbo metu dėl detalesnės informacijos.';
 $img = get_field ( 'ctaImage' );
 $phone = get_field( 'cta_phone' ) ?: '+370 674 578 38';
 $email = get_field ( 'cta_email' ) ?: 'info@plastas.lt'

@@ -9,16 +9,20 @@ get_header();
 ?>
 
 <main>
+  <section class="default-page">
+    <div class="row">
     
-    <?php 
-    if (have_posts()) : 
+      <?php 
+      if (have_posts()) : 
         while (have_posts()) : 
-            the_post(); 
-            the_content(); 
+          the_post(); 
+          the_content(); 
         endwhile; 
-    endif; 
-    ?>
+      endif; 
+      ?>
 
+    </div>
+  </section>
 </main>
 
 <?php get_footer(); ?>

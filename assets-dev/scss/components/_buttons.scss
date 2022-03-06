@@ -1,21 +1,33 @@
 .button {
-    &:link,
-    &:visited {
-        background-color: $c-primary;
-        border: 0;
-        border-radius: 4px;
-        @include txt-regular;
-        @include txt-c-white;
-        text-transform: uppercase;
-        padding: 1rem 2.8rem;
-        transition: background-color 0.3s, color 0.3s, box-shadow .3s;
-    }
+  &:link,
+  &:visited {
+    background-color: $c-primary;
+    border: 0;
+    border-radius: 4px;
+    @include txt-regular;
+    @include txt-c-white;
+    text-transform: uppercase;
+    padding: 1rem 2.8rem;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  }
 
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: $c-hover;
-        color: $c-white;
-        @include shadow-small;
-    }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $c-hover;
+    color: $c-white;
+    @include shadow-small;
+  }
+}
+
+.btn-inline {
+  color: $c-primary;
+  transition: color 0.3s;
+  font-weight: 700;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $c-hover;
+  }
 }

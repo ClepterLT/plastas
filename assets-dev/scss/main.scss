@@ -17,7 +17,8 @@
   "components/product-card", "components/subnav", "components/dropdown";
 
 // 5. Layout-related sections
-@import "layout/header", "layout/footer", "layout/products-archive";
+@import "layout/header", "layout/footer", "layout/products-archive",
+  "layout/pagination", "layout/page";
 
 // 6. Page-specific styles
 // @import

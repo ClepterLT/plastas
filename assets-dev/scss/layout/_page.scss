@@ -1,0 +1,19 @@
+.default-page {
+  p {
+    margin-bottom: 3.2rem;
+  }
+
+  ul {
+    li {
+      &::before {
+        content: url("../../images/icon-list-arrow.svg");
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+        margin-top: 6px;
+      }
+    }
+
+    margin-bottom: 4rem;
+  }
+}

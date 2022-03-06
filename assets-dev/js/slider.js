@@ -53,23 +53,26 @@ const slider = function() {
     createDots();
     activateDot(0);
   }
-  init();
 
-  btnRight.addEventListener('click', nextSlide);
-  btnLeft.addEventListener('click', previousSlide);
+  if(slides.length > 0) {
+    init();
 
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowLeft') previousSlide();
-    if (e.key === 'ArrowRight') nextSlide();
-  })
+    btnRight.addEventListener('click', nextSlide);
+    btnLeft.addEventListener('click', previousSlide);
 
-  dotsContainer.addEventListener('click', function(e) {
-    if(e.target.classList.contains("dots__dot")) {
-      const {slide} = e.target.dataset;
-      goToSlide(slide);
-      activateDot(slide);
-    }
-  });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') previousSlide();
+      if (e.key === 'ArrowRight') nextSlide();
+    })
+
+    dotsContainer.addEventListener('click', function(e) {
+      if(e.target.classList.contains("dots__dot")) {
+        const {slide} = e.target.dataset;
+        goToSlide(slide);
+        activateDot(slide);
+      }
+    });
+  }
 }
 
 export default slider;

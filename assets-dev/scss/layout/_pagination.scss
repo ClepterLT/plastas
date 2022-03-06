@@ -1,0 +1,13 @@
+.pagination {
+  display: flex;
+  border-radius: 10px;
+  padding: 0.8rem;
+  column-gap: 0.8rem;
+  align-items: center;
+
+  &__row {
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: center;
+  }
+}

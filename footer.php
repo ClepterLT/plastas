@@ -13,11 +13,16 @@
         <div class="footer_column">
           <h5 class="txt-h5">Produktai</h5>
           <ul class="footer__list">
-            <li class="footer__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-list-arrow.svg" class="footer__arrow" alt="List arrow" /><a href="#" class="plastas-link">Produktas 1</a></li>
-            <li class="footer__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-list-arrow.svg" class="footer__arrow" alt="List arrow" /><a href="#" class="plastas-link">Produktas 2</a></li>
-            <li class="footer__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-list-arrow.svg" class="footer__arrow" alt="List arrow" /><a href="#" class="plastas-link">Produktas 3</a></li>
-            <li class="footer__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-list-arrow.svg" class="footer__arrow" alt="List arrow" /><a href="#" class="plastas-link">Produktas 4</a></li>
-            <li class="footer__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-list-arrow.svg" class="footer__arrow" alt="List arrow" /><a href="#" class="plastas-link">Produktas 5</a></li>
+            <?php
+              $featured_products = get_field('footer_featured_products', 'options');
+              foreach($featured_products as $product):
+              
+            ?>
+              <li class="footer__item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-list-arrow.svg" class="footer__arrow" alt="List arrow" />
+                <a href="<?= get_permalink($product->ID); ?>" class="plastas-link"><?= $product->post_title ?></a>
+              </li>
+            <?php endforeach; ?>
           </ul>
         </div>
         <div class="footer__column">

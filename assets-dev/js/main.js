@@ -1,3 +1,4 @@
+import filterByCatInit from "./catFiltration";
 import mobileNav from "./mobileNav";
 import slider from "./slider";
 
@@ -5,5 +6,6 @@ import slider from "./slider";
     $(document).ready(function() {
         mobileNav();
         slider();
+        filterByCatInit();
     })
 })(jQuery);

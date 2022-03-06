@@ -25,7 +25,7 @@ get_header();
           $products_cats = get_terms('products_categories');
         ?>
         <select name="products-cats" id="product-cats" class="dropdown">
-          <option value="product" class="dropdown__option" selected>Visi produktai</option>
+          <option value="all" class="dropdown__option" selected>Visi produktai</option>
           <?php
             foreach($products_cats as $cat):
             ?>
@@ -80,11 +80,25 @@ get_header();
               </div>
               <?php endif; ?>
               <?php the_excerpt(); ?>
+              <div class="product-card__footer">
+                <a href="<?php the_permalink(); ?>" class="btn-inline">Daugiau &#187;</a>
+              </div>
             </div>
           </div>
         <?php endwhile; ?>
 
       <?php  endif; ?>
+    </div>
+
+    <div class="row pagination__row">
+      <div class="pagination">
+        <?= paginate_links(array(
+          'format' => '?paged=%#%',
+          'current' => max( 1, get_query_var('paged') ),
+          'prev_text' => __('&laquo; Atgal'),
+          'next_text' => __('Pirmyn &raquo;'),
+        )); ?>
+      </div>
     </div>
   </section>
 

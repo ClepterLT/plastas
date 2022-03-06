@@ -67,7 +67,7 @@ add_theme_support('post-thumbnails');
 // EXCERPT
 function hd_custom_excerpt_length($length)
 {
-    return 10;
+    return 13;
 }
 add_filter('excerpt_length', 'hd_custom_excerpt_length', 999);
 

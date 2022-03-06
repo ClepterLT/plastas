@@ -5,6 +5,10 @@
   min-height: 56rem;
   position: relative;
 
+  @include respond(br930) {
+    min-height: 64rem;
+  }
+
   &__photo {
     max-height: 70%;
   }
@@ -21,7 +25,7 @@
     border-radius: 30px;
     position: absolute;
     background-color: $c-white;
-    top: 60%;
+    top: 55%;
     left: 0;
   }
 
@@ -36,9 +40,15 @@
 
   &__cats {
     position: absolute;
-    top: 46%;
+    top: 42%;
     padding: 2.4rem;
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__footer {
+    margin-top: 0.8rem;
     display: flex;
     justify-content: flex-end;
   }
