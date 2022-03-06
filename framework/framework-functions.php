@@ -4,10 +4,12 @@
 include_once('functions/custom-functions/register-blocks.php');
 
 // POST TYPES
-// include_once('functions/post-types/news.php');
+include_once('functions/post-types/product.php');
 
 // TAXONOMIES
-//include_once('functions/taxonomies/projects.php');
+include_once('functions/taxonomies/colors.php');
+include_once('functions/taxonomies/materials.php');
+include_once('functions/taxonomies/products-categories.php');
 
 // NAV-WALKERS
 // include_once('functions/nav-walkers/wp_bootstrap_navwalker.php');

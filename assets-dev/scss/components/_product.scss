@@ -1,0 +1,78 @@
+.product {
+  &__row {
+    display: flex;
+    column-gap: 4.8rem;
+
+    @include respond(br930) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    flex: 0 0 55%;
+
+    @include respond(br930) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__right {
+    p {
+      margin-bottom: 1.6rem;
+    }
+
+    ul {
+      li {
+        &::before {
+          content: url("../../images/icon-list-arrow.svg");
+          display: inline-block;
+          height: 2rem;
+          width: 2rem;
+          margin-top: 6px;
+        }
+      }
+
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__cats {
+    margin-bottom: 2.4rem;
+    display: flex;
+    column-gap: 1.6rem;
+    row-gap: 1.6rem;
+    flex-wrap: wrap;
+  }
+
+  &__cat {
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    background-color: $c-grey;
+    @include txt-small;
+  }
+
+  &__subparagraph {
+    margin-bottom: 3.2rem;
+  }
+
+  &__tags {
+    display: flex;
+    column-gap: 1.6rem;
+    row-gap: 1.6rem;
+    flex-wrap: wrap;
+  }
+
+  &__price {
+    @include txt-big;
+    background-color: $c-grey-light;
+    padding: 2rem 3rem;
+    clip-path: polygon(83% 0, 100% 50%, 84% 100%, 0% 100%, 0 48%, 0% 0%);
+  }
+
+  &__manual {
+    img {
+      max-width: 5rem;
+      width: auto;
+    }
+  }
+}

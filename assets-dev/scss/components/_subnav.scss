@@ -1,0 +1,27 @@
+.subnav {
+  padding: 1.6rem 0;
+  background-color: $c-black;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__breadcrumbs {
+    color: $c-white;
+    display: flex;
+    align-items: center;
+    column-gap: 1.6rem;
+  }
+
+  &__controls {
+    position: relative;
+
+    svg {
+      position: absolute;
+      transform: rotate(90deg);
+      top: 35%;
+      right: 2rem;
+    }
+  }
+}

@@ -13,10 +13,11 @@
 
 // 4. Components
 @import "components/buttons", "components/hero", "components/feature",
-  "components/cta";
+  "components/product", "components/cta", "components/slider", "components/tag",
+  "components/product-card", "components/subnav", "components/dropdown";
 
 // 5. Layout-related sections
-@import "layout/header", "layout/footer";
+@import "layout/header", "layout/footer", "layout/products-archive";
 
 // 6. Page-specific styles
 // @import

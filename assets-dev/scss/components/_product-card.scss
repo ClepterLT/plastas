@@ -1,0 +1,45 @@
+.product-card {
+  @include shadow-medium;
+  border-radius: 30px;
+  overflow: hidden;
+  min-height: 56rem;
+  position: relative;
+
+  &__photo {
+    max-height: 70%;
+  }
+
+  &__img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__details {
+    padding: 2.4rem;
+    border-radius: 30px;
+    position: absolute;
+    background-color: $c-white;
+    top: 60%;
+    left: 0;
+  }
+
+  &__title {
+    @include product-card-title;
+    margin-bottom: 1.6rem;
+  }
+
+  &__colors {
+    margin-bottom: 1.6rem;
+  }
+
+  &__cats {
+    position: absolute;
+    top: 46%;
+    padding: 2.4rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

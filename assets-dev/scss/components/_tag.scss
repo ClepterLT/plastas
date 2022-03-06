@@ -1,0 +1,30 @@
+.tag {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+
+  &--with-name {
+    background-color: transparent;
+    border: $b-small;
+    position: relative;
+    min-width: 8rem;
+  }
+
+  &__name {
+    position: absolute;
+    top: -40%;
+    left: 5%;
+    background-color: $c-white;
+    padding: 2px;
+    @include txt-small;
+    font-weight: 700;
+  }
+
+  &--color {
+    background-color: $c-grey-light;
+  }
+
+  &--material {
+    background-color: $c-primary;
+    color: $c-white;
+  }
+}

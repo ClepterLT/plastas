@@ -1,0 +1,18 @@
+.dropdown {
+  appearance: none;
+  background-color: transparent;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  width: 100%;
+  cursor: inherit;
+  position: relative;
+  @include txt-regular;
+  color: $c-white;
+
+  option {
+    color: $c-black;
+  }
+}
