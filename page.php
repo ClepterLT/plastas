@@ -8,21 +8,15 @@
 get_header();
 ?>
 
-<main>
-  <section class="default-page">
-    <div class="row">
-    
-      <?php 
-      if (have_posts()) : 
-        while (have_posts()) : 
-          the_post(); 
-          the_content(); 
-        endwhile; 
-      endif; 
-      ?>
-
-    </div>
-  </section>
+<main>    
+  <?php 
+  if (have_posts()) : 
+    while (have_posts()) : 
+      the_post(); 
+      the_content(); 
+    endwhile; 
+  endif; 
+  ?>
 </main>
 
 <?php get_footer(); ?>
