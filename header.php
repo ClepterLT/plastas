@@ -72,12 +72,28 @@
       </button>
         
       <nav class="nav-header--mobile">
+        <?php
+          if( have_rows('header_nav_menu_items', 'options') ) :
+        ?>
         <ul class="nav-header--mobile__list" id="nav-list">
-          <li class="nav-header--mobile__item"><a href="products.html" class="nav-header--mobile__link">Produktai</a></li>
-          <li class="nav-header--mobile__item"><a href="aboutus.html" class="nav-header--mobile__link">Apie mus</a></li>
-          <li class="nav-header--mobile__item"><a href="contact.html" class="nav-header--mobile__link">Kontaktai</a></li>
+          <?php
+            while( have_rows('header_nav_menu_items', 'options') ) : the_row();
+              $menu_item_title = get_sub_field('menu_item_title');
+              $menu_item_link = get_sub_field('menu_item_link');
+          ?>
+          <li class="nav-header--mobile__item"><a href="<?= $menu_item_link ?>" class="nav-header--mobile__link"><?= $menu_item_title ?></a></li>
+          <?php
+          endwhile;
+          ?>
         </ul>
-        <a href="products.html" class="button">Produktai</a>
+        <?php
+        endif;
+        ?>
+        <?php
+        if ($header_nav_button_label AND $header_nav_button_link):
+          echo '<a href="'.$header_nav_button_link.'" class="button">'.$header_nav_button_label.'</a>';
+        endif;
+        ?>
       </nav>
 
     </div>
